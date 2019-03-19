@@ -5,6 +5,7 @@ Concepts
 3. The git server holds a REMOTE repo
 4. Modification to files does not update LOCAL repo until you tell git to do so
 5. HEAD is a pointer pointing at the branch you are currently in
+6. (No, in fact HEAD is a pointer pointing to a commit, but it would take more time to explain that so for now just assume it is a branch pointer)
 
 ---
 
@@ -53,6 +54,9 @@ git reset [the target commit's hash value] --hard
 Check current status
 ---
 ```
+# See what is the difference between current state and last commit
+git diff
+
 # See which file is modified but not updated to local repo
 git status
 

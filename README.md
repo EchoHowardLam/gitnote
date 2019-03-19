@@ -22,16 +22,12 @@ git branch NewBranchName
 git checkout BranchName
 ```
 
----
-
 Update local repo's HEAD branch based on the modified files
 ---
 ```
 git add -A
 git commit -m 'Type your commit message here'
 ```
-
----
 
 Sync local repo to remote repo (pull all branch, push HEAD branch)
 ---
@@ -40,4 +36,26 @@ Sync local repo to remote repo (pull all branch, push HEAD branch)
 git pull
 git push origin
 ```
+
+Oh no, I screw up
 ---
+```
+# see which commit you wish to go back
+git log --oneline
+
+# if you only screw up the "git commit" and want to keep your file modifications
+git reset [the target commit's hash value]
+
+# else if you screw up the file modification too and want to reset file contents too
+git reset [the target commit's hash value] --hard
+```
+
+Check current status
+---
+```
+# See which file is modified but not updated to local repo
+git status
+
+# See history of commits
+git log
+```
